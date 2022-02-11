@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.387bcf54.chunk.css",
-    "main.js": "/static/js/main.cac4e911.chunk.js",
-    "main.js.map": "/static/js/main.cac4e911.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c7eaf87a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c7eaf87a.js.map",
+    "main.css": "/static/css/main.931b2ada.chunk.css",
+    "main.js": "/static/js/main.c99a0c27.chunk.js",
+    "main.js.map": "/static/js/main.c99a0c27.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c37afe18.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c37afe18.js.map",
     "static/css/2.19627560.chunk.css": "/static/css/2.19627560.chunk.css",
-    "static/js/2.6fbcba80.chunk.js": "/static/js/2.6fbcba80.chunk.js",
-    "static/js/2.6fbcba80.chunk.js.map": "/static/js/2.6fbcba80.chunk.js.map",
-    "static/js/3.0eb811a9.chunk.js": "/static/js/3.0eb811a9.chunk.js",
-    "static/js/3.0eb811a9.chunk.js.map": "/static/js/3.0eb811a9.chunk.js.map",
+    "static/js/2.15c06782.chunk.js": "/static/js/2.15c06782.chunk.js",
+    "static/js/2.15c06782.chunk.js.map": "/static/js/2.15c06782.chunk.js.map",
+    "static/js/3.71c0d596.chunk.js": "/static/js/3.71c0d596.chunk.js",
+    "static/js/3.71c0d596.chunk.js.map": "/static/js/3.71c0d596.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.19627560.chunk.css.map": "/static/css/2.19627560.chunk.css.map",
-    "static/css/main.387bcf54.chunk.css.map": "/static/css/main.387bcf54.chunk.css.map",
-    "static/js/2.6fbcba80.chunk.js.LICENSE.txt": "/static/js/2.6fbcba80.chunk.js.LICENSE.txt",
+    "static/css/main.931b2ada.chunk.css.map": "/static/css/main.931b2ada.chunk.css.map",
+    "static/js/2.15c06782.chunk.js.LICENSE.txt": "/static/js/2.15c06782.chunk.js.LICENSE.txt",
     "static/media/Ahmet Isik - Resume.b4c31151.pdf": "/static/media/Ahmet Isik - Resume.b4c31151.pdf",
     "static/media/index.css": "/static/media/BestermindRegular.e58a1922.ttf",
     "static/media/Rick_and_Morty_logo.6d98cb2f.svg": "/static/media/Rick_and_Morty_logo.6d98cb2f.svg",
@@ -91,6 +91,7 @@
     "static/media/jotforum.c40ab30e.png": "/static/media/jotforum.c40ab30e.png",
     "static/media/julia.2f794baf.svg": "/static/media/julia.2f794baf.svg",
     "static/media/kotlin.bf3c189f.svg": "/static/media/kotlin.bf3c189f.svg",
+    "static/media/light.ce890bce.png": "/static/media/light.ce890bce.png",
     "static/media/lightroom.424c8312.svg": "/static/media/lightroom.424c8312.svg",
     "static/media/markdown.6fca45ee.svg": "/static/media/markdown.6fca45ee.svg",
     "static/media/materialui.d7f5c38f.svg": "/static/media/materialui.d7f5c38f.svg",
@@ -103,6 +104,7 @@
     "static/media/mysql.61d16d64.svg": "/static/media/mysql.61d16d64.svg",
     "static/media/nextJS.330fb71c.svg": "/static/media/nextJS.330fb71c.svg",
     "static/media/nginx.63e0789f.svg": "/static/media/nginx.63e0789f.svg",
+    "static/media/night.3bea3d39.png": "/static/media/night.3bea3d39.png",
     "static/media/numpy.91d932ca.svg": "/static/media/numpy.91d932ca.svg",
     "static/media/nuxtJS.6dcfb7a9.svg": "/static/media/nuxtJS.6dcfb7a9.svg",
     "static/media/one.9ac983ad.svg": "/static/media/one.9ac983ad.svg",
@@ -150,10 +152,10 @@
     "static/media/yte-logo.62f8ecf2.jpg": "/static/media/yte-logo.62f8ecf2.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c7eaf87a.js",
+    "static/js/runtime-main.c37afe18.js",
     "static/css/2.19627560.chunk.css",
-    "static/js/2.6fbcba80.chunk.js",
-    "static/css/main.387bcf54.chunk.css",
-    "static/js/main.cac4e911.chunk.js"
+    "static/js/2.15c06782.chunk.js",
+    "static/css/main.931b2ada.chunk.css",
+    "static/js/main.c99a0c27.chunk.js"
   ]
 }
