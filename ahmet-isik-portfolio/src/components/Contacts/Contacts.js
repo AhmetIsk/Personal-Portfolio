@@ -153,6 +153,7 @@ function Contacts() {
                         setName('');
                         setEmail('');
                         setMessage('');
+                        setSubject('');
                         setOpen(false);
                     },
                     (error) => {
