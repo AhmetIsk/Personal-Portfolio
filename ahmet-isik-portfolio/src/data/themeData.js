@@ -8,5 +8,9 @@ export const themeData = {
     theme: blueThemeLight
 }
 
+export const themeDarkData = {
+    theme: blueThemeDark
+}
+
 
 // Choose theme from above

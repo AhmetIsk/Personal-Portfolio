@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react'
 
-import { themeData } from '../data/themeData'
+import { themeDarkData, themeData } from '../data/themeData'
+import { blueThemeLight } from '../theme/theme'
 
 export const ThemeContext = createContext()
 
@@ -13,9 +14,14 @@ function ThemeContextProvider(props) {
         setDrawerOpen(!drawerOpen)
     }
 
+    const setHandleTheme = () => {
+        if (theme === blueThemeLight)
+            setTheme(themeDarkData.theme);
+        else
+            setTheme(themeData.theme);
+    }
 
-
-    const value = { theme, drawerOpen, setHandleDrawer }
+    const value = { theme, drawerOpen, setHandleDrawer, setHandleTheme }
     return (
         <ThemeContext.Provider value={value}>
             {props.children}
