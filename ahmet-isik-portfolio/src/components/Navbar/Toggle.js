@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./styles.css";
 import light from '../../assets/png/light.png';
 import night from '../../assets/png/night.png';
