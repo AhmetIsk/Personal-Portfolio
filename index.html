@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Personal portfolio with projects, background, skills, and contact links."
+    >
+    <title>Ahmet Işık | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" data-bind="profile.name">Ahmet</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-bind="profile.kicker">Software engineer in Berlin</p>
+          <h1 id="hero-title" data-bind="profile.headline">Ahmet Işık</h1>
+          <p class="hero-summary" data-bind="profile.summary">
+            At AWS in Berlin, I work on Amazon Connect scheduling and workforce management. My background spans cloud services, frontend systems, developer platforms, and compliance workflows.
+          </p>
+          <div class="hero-chips" id="hero-chips" aria-label="Profile highlights"></div>
+          <div class="action-row" id="hero-actions" aria-label="Primary links"></div>
+        </div>
+
+        <aside class="profile-panel" aria-label="Profile snapshot">
+          <div class="profile-card-top">
+            <img id="profile-avatar" src="" alt="" hidden>
+            <div>
+              <span class="stat-value" data-bind="profile.name">Ahmet Işık</span>
+              <span class="stat-label" data-bind="profile.current">AWS - Amazon Connect</span>
+            </div>
+          </div>
+          <div>
+            <span class="stat-value" data-bind="profile.focus">Full-stack software engineering</span>
+            <span class="stat-label">Focus</span>
+          </div>
+          <div>
+            <span class="stat-value" data-bind="profile.education">M.Sc. Informatics @ TUM</span>
+            <span class="stat-label">Education</span>
+          </div>
+          <div class="github-mini" id="github-mini"></div>
+        </aside>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Cloud product engineering with full-stack ownership.</h2>
+        </div>
+        <div class="about-grid" id="about-list"></div>
+      </section>
+
+      <section class="section section-tight" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="projects-title">Production systems, product interfaces, and public projects</h2>
+        </div>
+        <div class="project-grid" id="project-list"></div>
+      </section>
+
+      <section class="section split-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Toolkit</p>
+          <h2 id="skills-title">Skills</h2>
+        </div>
+        <div class="skills-grid" id="skills-list"></div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="eyebrow">Background</p>
+          <h2 id="experience-title">Experience and education</h2>
+        </div>
+        <div class="timeline" id="experience-list"></div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Contact</h2>
+          <p data-bind="profile.contactNote">
+            You can find my code on GitHub, my professional profile on LinkedIn, and my resume as a PDF.
+          </p>
+        </div>
+        <div class="action-row" id="contact-actions" aria-label="Contact links"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-bind="profile.name">Ahmet</span>
+      <span id="footer-year"></span>
+    </footer>
+
+    <script src="site-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
