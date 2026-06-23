@@ -216,12 +216,20 @@ window.portfolioData = {
       icon: "assets/logos/jotform.svg",
     },
     {
-      role: "Education",
-      organization: "Technical University of Munich and Bilkent University",
-      period: "M.Sc. Informatics / B.Sc. Computer Science",
+      role: "M.Sc. Informatics",
+      organization: "Technical University of Munich",
+      period: "Munich, Germany",
       description:
-        "Graduate studies in informatics at TUM and undergraduate studies in computer science at Bilkent University.",
+        "Graduate studies in informatics.",
       icon: "assets/logos/tum.svg",
+    },
+    {
+      role: "B.Sc. Computer Science",
+      organization: "Bilkent University",
+      period: "Ankara, Turkey",
+      description:
+        "Undergraduate studies in computer science. Ranked 859th among 2,265,895 candidates in the University Entrance Exam and awarded a Comprehensive Scholarship.",
+      icon: "assets/logos/bilkent.svg",
     },
   ],
 };
