@@ -23,9 +23,12 @@
     return element;
   }
 
-  function createLogo(src, alt) {
+  function createLogo(src, alt, style = "") {
     const image = document.createElement("img");
     image.className = "logo-mark";
+    if (style) {
+      image.classList.add(`logo-mark-${style}`);
+    }
     image.src = src;
     image.alt = alt;
     return image;
@@ -71,7 +74,7 @@
     }
   }
 
-  function renderActions(containerId, primaryKey = "github") {
+  function renderActions(containerId, primaryKey = "") {
     const container = document.getElementById(containerId);
     if (!container) return;
 
@@ -80,6 +83,34 @@
       if (!isUsableLink(links[key])) return;
       const variant = key === primaryKey ? "primary" : "secondary";
       container.appendChild(createLink(linkLabels[key], links[key], variant));
+    });
+  }
+
+  function renderHeroChips() {
+    const container = document.getElementById("hero-chips");
+    if (!container) return;
+
+    const chips = Array.isArray(profile.highlights) ? profile.highlights : [];
+    chips.forEach((item) => {
+      container.appendChild(createElement("span", "", item));
+    });
+  }
+
+  function renderAbout() {
+    const container = document.getElementById("about-list");
+    if (!container) return;
+
+    const items = Array.isArray(data.about) ? data.about : [];
+    if (!items.length) {
+      container.closest("section").hidden = true;
+      return;
+    }
+
+    items.forEach((item) => {
+      const article = createElement("article", "about-card");
+      article.appendChild(createElement("h3", "", text(item.title, "About")));
+      article.appendChild(createElement("p", "", text(item.body)));
+      container.appendChild(article);
     });
   }
 
@@ -101,32 +132,6 @@
     });
   }
 
-  function renderAffiliations() {
-    const container = document.getElementById("affiliation-list");
-    if (!container) return;
-
-    const affiliations = Array.isArray(data.affiliations) ? data.affiliations : [];
-    if (!affiliations.length) {
-      container.closest("section").hidden = true;
-      return;
-    }
-
-    affiliations.forEach((affiliation) => {
-      const article = createElement("article", "affiliation-card");
-      if (isUsableLink(affiliation.icon)) {
-        article.appendChild(createLogo(affiliation.icon, ""));
-      }
-
-      const body = createElement("div", "affiliation-body");
-      body.appendChild(createElement("p", "affiliation-type", text(affiliation.type)));
-      body.appendChild(createElement("h3", "", text(affiliation.name, "Affiliation")));
-      body.appendChild(createElement("p", "", text(affiliation.detail)));
-      body.appendChild(createElement("span", "affiliation-period", text(affiliation.period)));
-      article.appendChild(body);
-      container.appendChild(article);
-    });
-  }
-
   function renderProjects() {
     const container = document.getElementById("project-list");
     if (!container) return;
@@ -139,9 +144,13 @@
 
     projects.forEach((project) => {
       const article = createElement("article", "project-card");
+      if (project.featured) {
+        article.classList.add("project-card-featured");
+      }
+
       const header = createElement("div", "card-header");
       if (isUsableLink(project.icon)) {
-        header.appendChild(createLogo(project.icon, ""));
+        header.appendChild(createLogo(project.icon, "", project.logoStyle));
       }
 
       const titleBlock = createElement("div", "card-title-block");
@@ -226,8 +235,11 @@
 
     entries.forEach((entry) => {
       const article = createElement("article", "timeline-item");
+      if (entry.logoStyle === "brand") {
+        article.classList.add("timeline-item-brand");
+      }
       if (isUsableLink(entry.icon)) {
-        article.appendChild(createLogo(entry.icon, ""));
+        article.appendChild(createLogo(entry.icon, "", entry.logoStyle));
       }
 
       const body = createElement("div", "timeline-body");
@@ -246,10 +258,11 @@
   }
 
   bindProfileText();
+  renderHeroChips();
   renderActions("hero-actions");
   renderActions("contact-actions");
   renderGithubMini();
-  renderAffiliations();
+  renderAbout();
   renderProjects();
   renderSkills();
   renderExperience();
