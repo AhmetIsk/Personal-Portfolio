@@ -28,7 +28,6 @@
     image.className = "logo-mark";
     image.src = src;
     image.alt = alt;
-    image.loading = "lazy";
     return image;
   }
 
